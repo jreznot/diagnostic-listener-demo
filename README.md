@@ -28,3 +28,9 @@ After running either action, check the IDE log (`Help | Show Log in Finder/Explo
 entries from `DiagnosticLoggerErrorReportSink`.
 
 **Note!** Please run plugin without debug to see it in action, otherwise freeze detector is disabled.
+
+Example output:
+
+> 2026-05-26 21:26:04,391 [35580069]   WARN - #org.example.DiagnosticLoggerErrorReportSink - UI freeze detected in plugin: 30002ms
+
+> 2026-05-26 21:26:42,221 [35617899]   WARN - #org.example.DiagnosticLoggerErrorReportSink - Unhandled exception in pluginclass java.lang.RuntimeException
