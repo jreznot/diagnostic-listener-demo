@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>org.example.diagnostic-logger-demo</id>
+    <name>Diagnostic Logger Demo</name>
+    <vendor>JetBrains</vendor>
+
+    <description><![CDATA[
+        Showcase of ErrorReportSink extension point.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <resource-bundle>messages.MyMessageBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <errorReportSink implementation="org.example.DiagnosticLoggerErrorReportSink"/>
+    </extensions>
+
+    <actions>
+        <action id="DiagnosticLoggerDemo.AlwaysThrowException"
+                class="org.example.AlwaysThrowExceptionAction"
+                text="Always Throw Exception"/>
+        <action id="DiagnosticLoggerDemo.AlwaysFreeze"
+                class="org.example.AlwaysFreezeAction"
+                text="Always Freeze"/>
+    </actions>
+</idea-plugin>
